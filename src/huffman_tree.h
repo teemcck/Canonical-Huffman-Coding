@@ -13,8 +13,5 @@ typedef struct huffman_node {
 int build_huffman_tree(const uint64_t *frequencies, huffman_node **root);
 void release_tree(huffman_node *root);
 void build_code_lengths(const huffman_node *root, uint8_t *code_lengths, unsigned depth);
-/* Extension point: adjust per-symbol lengths using frequencies.
- * Currently rejects lengths above MAX_CODE_LEN. */
-int limit_code_lengths(const uint64_t *frequencies, uint8_t *code_lengths);
 
 #endif

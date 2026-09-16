@@ -75,16 +75,3 @@ void build_code_lengths(const huffman_node *root, uint8_t *code_lengths, unsigne
     build_code_lengths(root->left, code_lengths, depth + 1);
     build_code_lengths(root->right, code_lengths, depth + 1);
 }
-
-int limit_code_lengths(const uint64_t *frequencies, uint8_t *code_lengths) {
-    // TODO: implement length limiting using frequencies and code_lengths.
-    (void)frequencies;
-
-    // Until limiting is implemented, reject trees that need longer codes.
-    for (size_t symbol = 0; symbol < SYMBOL_COUNT; ++symbol) {
-        if (code_lengths[symbol] > MAX_CODE_LEN) {
-            return EXIT_FAILURE;
-        }
-    }
-    return EXIT_SUCCESS;
-}

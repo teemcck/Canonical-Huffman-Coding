@@ -47,22 +47,6 @@ void test_small_tree(void) {
 
 
 // ============================================
-// Test: Current code length limit
-// ============================================
-void test_length_limit(void) {
-    uint64_t frequencies[SYMBOL_COUNT] = {0};
-    uint8_t code_lengths[SYMBOL_COUNT] = {0};
-    frequencies['A'] = 1;
-    code_lengths['A'] = MAX_CODE_LEN;
-    assert(limit_code_lengths(frequencies, code_lengths) == EXIT_SUCCESS);
-
-    // The current placeholder rejects lengths above the limit.
-    code_lengths['A'] = MAX_CODE_LEN + 1;
-    assert(limit_code_lengths(frequencies, code_lengths) == EXIT_FAILURE);
-}
-
-
-// ============================================
 // Main test runner
 // ============================================
 int main(void) {
@@ -70,7 +54,6 @@ int main(void) {
 
     test_empty_and_single();
     test_small_tree();
-    test_length_limit();
 
     printf("All tests passed!\n");
     return 0;

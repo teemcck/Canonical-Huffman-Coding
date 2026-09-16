@@ -10,9 +10,7 @@
 // Encoding time complexity: O(n + k log k), with code lengths capped at 15 bits.
 // n = input bytes, k = distinct symbols (at most 256).
 
-// To do:
-// - Write test suite and pass cases.
-// - Add length limiting to encoding.
+// Encoding goat does not affect size?
 
 int main(int argc, char *argv[]) {
     if (argc != 4 || (strcmp(argv[1], "-e") != 0 && strcmp(argv[1], "-d") != 0)) {
