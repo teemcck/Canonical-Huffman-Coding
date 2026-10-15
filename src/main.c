@@ -6,11 +6,9 @@
 // Canonical Huffman Coding Encoding/Decoding Algorithm
 // Author: Tristan McCaskill
 // Date (M/D/Y): 07/16/26
-// Reference: https://huffman-coding-online.vercel.app/
+// References: https://huffman-coding-online.vercel.app/,
 // Encoding time complexity: O(n + k log k), with code lengths capped at 15 bits.
 // n = input bytes, k = distinct symbols (at most 256).
-
-// Encoding goat does not affect size?
 
 int main(int argc, char *argv[]) {
     if (argc != 4 || (strcmp(argv[1], "-e") != 0 && strcmp(argv[1], "-d") != 0)) {
