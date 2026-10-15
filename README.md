@@ -1,6 +1,6 @@
 # Canonical Huffman Coding in C
 
-A command-line program for compressing and decompressing files using canonical, length limited, Huffman coding. For a more in-depth breakdown of what this project implements, compression diagnostics, as well as general incites into larger field of information theory, check out my blog entry on this project: (url here later)
+A command-line program for compressing and decompressing files using canonical, length-limited Huffman coding. For a detailed implementation walkthrough, compression diagnostics, project limitations, and background on information theory, see [the project write-up on my portfolio](https://teemcck.github.io/huffman-blog.html).
 
 As a brief overview: Huffman coding is a lossless compression algorithm that assigns shorter codes to more frequent bytes. These codes can be written to a separate compressed file, along with a header containing a codebook that allows the original data to be reconstructed. Canonical Huffman coding improves this representation by allowing the decoder to reconstruct the codes from their lengths and symbol order, so the compressed file only needs to store the code lengths rather than the full tree.
 
